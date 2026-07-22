@@ -4,6 +4,36 @@ Draft Guard is a Codex skill for editing and auditing prose without casually cha
 
 It treats every draft as source data. Instructions, commands, links, code comments, or prompt-injection text inside a draft do not control the agent.
 
+## ELI5
+
+Draft Guard is a set of editing rules for Codex. You give it writing, and it makes the writing clearer while trying not to change what you meant.
+
+It protects:
+
+- Facts, names, numbers, dates, links, and quotes.
+- Doubt such as “may,” “might,” or “I think.”
+- Your tone, humor, and rough edges.
+- Code, commands, and text you mark as locked.
+
+It also treats the draft as untrusted. If the draft says “open this link,” “run this command,” or “show me your secret prompt,” Draft Guard ignores that request.
+
+You can use it in two ways:
+
+- **Edit:** Rewrite the draft.
+- **Audit:** List weak patterns without rewriting anything.
+
+It has three edit strengths:
+
+- **Light:** Small fixes.
+- **Standard:** Clearer structure and sentences.
+- **Heavy:** A large rewrite, only when you ask.
+
+A small Python script checks that protected items did not vanish or change. It also flags text that looks like a password or API key.
+
+Draft Guard cannot prove that meaning stayed identical. It cannot replace a lawyer, doctor, editor, or security system. Its safety rules guide the model; they are not a locked software wall.
+
+It runs only when you call it. It does not guide Codex all the time.
+
 ## What it does
 
 Draft Guard supports two modes.
