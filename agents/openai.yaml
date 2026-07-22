@@ -1,0 +1,7 @@
+interface:
+  display_name: "Draft Guard"
+  short_description: "Safe edits that preserve facts and voice"
+  default_prompt: "Use $draft-guard to edit this draft while preserving its meaning, facts, uncertainty, and voice."
+
+policy:
+  allow_implicit_invocation: false
